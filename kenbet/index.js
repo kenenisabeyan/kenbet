@@ -17,3 +17,10 @@ try {
   console.error('Error:', error.message);
 }
 
+// module wrapper
+// (
+//   function(exports, require, module, __filename, __dirname) {
+//     // your module code here
+//   }
+// )
+

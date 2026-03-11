@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kenenisabeyan/kenbet/issues"
   },
-  "homepage": "https://github.com/kenenisabeyan/kenbet#readme"
+  "homepage": "https://github.com/kenenisabeyan/kenbet#readme",
+  "dependencies": {
+    "lodash": "^4.17.23"
+  }
 }
