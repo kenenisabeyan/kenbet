@@ -1,3 +1,6 @@
+//module.exports
+//require -> import
+//exports -> export
 function add (a, b) {
   return a + b;
 }
@@ -18,7 +21,7 @@ function divide (a, b) {
 
 }
 
-module . exports = {
+module.exports = {
   add,
   substract,
   multiply,
