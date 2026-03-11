@@ -1,1 +1,2 @@
 Hello, this is a sample file created using Node.js!
+This line is appended to the file.
