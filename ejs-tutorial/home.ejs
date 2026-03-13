@@ -1,2 +1,22 @@
-<h1>Welcome to Our Website or our home page</h1>
-<label for=""></label>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <h1>Welcome to the <%= title %>
+  </h1>
+  <ul>
+    <% products.forEach(product=> { %>
+      <li>
+        <%= product.name %> - $<%= product.price %>
+      </li>
+      <% }) %>
+  </ul>
+</body>
+
+</html>
