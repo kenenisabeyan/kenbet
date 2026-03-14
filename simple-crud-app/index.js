@@ -1,22 +1,29 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const app = express()
+const express = require("express");
+const mongoose = require("mongoose"); // <-- only once
+const app = express();
+const PORT = 3000;
 
-app.listen(3000, () =>{
-  console.log("Server is running on port 3000");
-
+// Connect to MongoDB
+mongoose.connect(
+    "mongodb+srv://keno_astu:keno30772@backenddb.oanerac.mongodb.net/?retryWrites=true&w=majority&appName=BackendDB"
+)
+.then(() => {
+    console.log("Connected to database");
+})
+.catch(err => {
+    console.log("Connection failed");
+    console.log(err.message);
 });
 
-app.get('/', (req, res) =>{
-  res.send("Hello fron node API server updated")
+// Middleware
+app.use(express.json());
 
+// Example route
+app.get("/", (req, res) => {
+    res.send("Hello World");
 });
 
-mongoose.connect("mongodb+srv://keno_astu:keno30772@backenddb.oanerac.mongodb.net/Node-API?appName=BackendDB")
-.then(()=>{
-  console.log("Connected to database");
-});
-.catch(()=>{
-  console.log("Connection failed!");
-
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
